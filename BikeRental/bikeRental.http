@@ -1,0 +1,61 @@
+@host = https://localhost:5001/api
+
+###
+POST {{host}}/bikes
+Content-Type: application/json
+
+{
+    "Brand": "KTM",
+    "PurchaseDate": "2019-11-19",
+    "RentalBasic": 31,
+    "RentalExcessive": 5.01
+}
+
+###
+GET {{host}}/bikes
+
+###
+DELETE {{host}}/bikes/4
+
+###
+POST {{host}}/customers
+Content-Type: application/json
+
+{
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Birthday": "1940-11-10",
+    "Street": "Street",
+    "ZipCode": "Code",
+    "Town": "Town"
+}
+
+###
+GET {{host}}/customers
+
+###
+GET {{host}}/customers/1
+
+###
+GET {{host}}/customers/fiter/1
+
+###
+POST {{host}}/rentals
+Content-Type: application/json
+
+{
+    "BikeID": 1,
+    "CustomerID": 1
+}
+
+###
+PUT {{host}}/rentals/7
+
+###
+GET {{host}}/rentals
+
+###
+GET {{host}}/rentals/Unpaid
+
+###
+PUT {{host}}/rentals/pay/6
